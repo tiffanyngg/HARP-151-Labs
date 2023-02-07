@@ -1,6 +1,7 @@
 import random
 sowpods = "sowpods.txt"
 
+#sourced from powerpoint slides 1/30
 def word_generator():
   filename = sowpods
   f = open(filename, "r", encoding = "utf8")
