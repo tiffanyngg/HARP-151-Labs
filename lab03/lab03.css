@@ -1,0 +1,85 @@
+/* Tiffany Ng */
+
+/* This global selectors sets the whole website's background color to Thistle */
+*{
+  background-color: #E3C0D3;
+}
+
+/* 1 of the 3 CSS styling elements not discussed in class. I added a shadow text feature to the h1 tag. */
+#header{
+  font-family: "American Typewriter", sans-serif;
+  font-size: 75px;
+  color: white;
+  text-shadow: 2px 4px 4px lavender;
+  text-align: center;
+}
+
+summary{
+  background-color: #582C4D;
+  color: white;
+  font-family: "Monaco", sans-serif;
+}
+
+/* These would be examples of local elements as this code overrides the global element and is a specific part to the body. I also sectioned them to be in a row to play around with the padding features. I realized that it only looks best when it's on full screen. */
+/* ref: https://www.w3schools.com/css/css_align.asp */
+.project1, .project2, .project3{
+  background-color: #C8D6AF;
+  float:left;
+  width: 50%;
+  padding:5px;
+  border:dotted lavenderblush;
+}
+
+/* 1 of the 3 CSS styling elements not discussed in class. I changed the size of the button, added a border, and the background color of the button. */
+/* ref: https://www.w3schools.com/css/css3_buttons.asp */
+button{
+  background-color: #582C4D;
+  color: white;
+  padding: 8px 15px;
+  border: 3px inline white;
+  font-family: "Monaco", sans-serif;
+  box-shadow: 8px 8px 8px lavender;
+  text-align: right;
+}
+
+/* 1 of the 3 CSS styling elements not discussed in class. This changes the buttons color when cursor is hovered over it. */
+/* reference: https://www.w3schools.com/css/css3_buttons.asp */
+button:hover{
+  background-color: lavender;
+  color:black;
+}
+
+p{
+  font-family: "Monaco", sans-serif;
+  background-color: white;
+  text-align: center;
+}
+
+.theEnd{
+  background-color: #582C4D;
+  font-family: "Monaco", sans-serif;
+  font-size:12px;
+}
+
+label{
+  background-color: #582C4D;
+  color:white;
+}
+
+a{
+  background-color: #582C4D;
+  color:white;
+}
+
+input{
+  background-color:white;
+}
+
+.border{
+  color: #582C4D;
+}
+
+
+
+
+
