@@ -30,6 +30,7 @@ while page != 6:
             
         link = element.a.get("rel")
         
+        # extra credit         
         try:
             contributor = element.find("ul").text.strip()
         except:
