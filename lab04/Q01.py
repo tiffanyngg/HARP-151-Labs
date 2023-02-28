@@ -14,7 +14,7 @@ soup = BeautifulSoup(source, "lxml")
 csv_file = open("movie_scrape.csv", "w", newline="", encoding="utf-8")
 csv_writer = csv.writer(csv_file)
 
-# iterates through the 100 movies and extracts the title, release date, and genre of each movie
+# iterates through the 100 movies and extracts the title, release date, and genre of each movie 
 for element in soup.find_all("div", class_="lister-item-content"):
     title = element.a.text
     release = element.find("span", class_="lister-item-year text-muted unbold").text
