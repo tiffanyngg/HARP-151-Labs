@@ -1,14 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
+# Tiffany Ng
 
-# In[39]:
-
-
-get_ipython().system('pip install selenium')
-
-
-# In[48]:
-
+! pip install selenium
 
 #imports
 from selenium.webdriver.common.keys import Keys
@@ -19,28 +11,16 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-
-# In[66]:
-
-
 #accesses the path from my specific device
 #uses Google Chrome to open given link
 PATH = Service("/Users/tiff/Documents\chromedriver.exe")
 driver = webdriver.Chrome(service=PATH)
 driver.get("https://techwithtim.net/")
 
-
-# In[67]:
-
-
 #finds Python Programming hyperlink on website and clicks on it
 #end result: Python Programming webpage 
 link = driver.find_element(By.LINK_TEXT, "Python Programming")
 link.click()
-
-
-# In[68]:
-
 
 try:
     #from Python Programming, it finds Beginner Python Tutorials hyperlink and clicks on it
@@ -67,10 +47,3 @@ try:
 except: 
     #closes browser     
     driver.quit()
-
-
-# In[ ]:
-
-
-
-
