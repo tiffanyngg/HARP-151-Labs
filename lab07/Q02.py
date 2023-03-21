@@ -14,9 +14,9 @@ print(jsonPRHoli)
 print()
 
 # Retrieves given CountryCode's info from API
-PRInfo = requests.get(f"https://date.nager.at/api/v3/CountryInfo/{countryCode}")
-jsonPR = PRInfo.json()
-print(jsonPR)
+prInfo = requests.get(f"https://date.nager.at/api/v3/CountryInfo/{countryCode}")
+jsonPR = prInfo.json()
+print(jsonpr)
 print()
 
 # Accesses all countries in API and returns their name and corresponding CountryCode
