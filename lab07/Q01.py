@@ -41,7 +41,7 @@ df=pd.DataFrame(sheet)
 week = df["Time"]
 temp = df["Temperature"]
 
-# Bonus: To not make the x-axis crowd, I set the x-axis size big enough for all values
+# Bonus: To not make the x-axis crowd, I set the x-axis size big enough for all values to fit
 fig = plt.figure(figsize = (20,7))
 plt.bar(week, temp)
 
