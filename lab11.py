@@ -1,4 +1,3 @@
-# Tiffany Ng
 import random
 from tkinter import *
 import requests
@@ -11,40 +10,44 @@ triviaInfo
 
 #makes the list of questions
 questionList = []
-answerList = []
+options = []
 for i in triviaInfo:
     question = i["question"]
     questionList.append(question)
-    for j in range(4):
-        section = []
-        for k in i['incorrectAnswers']:
-            section.append(k)
-        correctAns = i["correctAnswer"]
-        print(correctAns)
-        insertIndex = random.randint(0,4)
-    section.insert(insertIndex, correctAns)
-    
-print(questionList)
-print()
-print(answerList)
-
-
+    optionIndex = i['incorrectAnswers']
+    index = random.randint(0,4)
+    optionIndex.insert(index, i['correctAnswer'])
+    options.append(optionIndex)
+ 
 root = Tk()
 root.title("Trivia")
 root.geometry("1000x800")
 
+user_answer = StringVar()
+user_answer.set("")
+
 count=0
 def nextQ():
     global count
-    question = Label(root, text=questionList[count],font=('Courier 18')).pack()
+    global currentQuestion
+    global currentOptions
+    currentQuestion = questionList[count]
+    currentOptions = options[count]
+    question = Label(root, text=currentQuestion,font=('Courier 18')).pack()
+    for i in currentOptions:
+        labelName = Radiobutton(root, text=i, font=('Courier 12')).pack()
     count+=1
-    
+
+score = 0
 def check():
-    pass
+    answer = user_answer.get()
+    for i in currentOptions:
+        if answer == i:
+            correct = Label(root, text="YOU GOT IT!", font=('Courier 10')).pack
+    
 
 checkAnswer = Button(root, text="Check Answer", command=check).pack(side=BOTTOM)
 nextButton = Button(root, text="Next Question", command=nextQ).pack(side=BOTTOM)
 label = Label(root,font=('Courier 18')).pack()
 
 root.mainloop()
-
